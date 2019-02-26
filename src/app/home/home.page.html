@@ -1,25 +1,67 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="medium">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
       Home
     </ion-title>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <ion-img src="/assets/shapes.svg"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
+  
+    <ion-card color="secondary" class="welcome-card">
+    
+      <ion-card-header color="tertiary">
+        <ion-img src="assets/pictures/limburgsmooiste.png" alt="limburgsmooiste"></ion-img>
       </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+      <ion-img src="https://www.limburgsmooiste.nl/wp-content/uploads/2018/08/klassieker-twee-fietsers-725x725.jpg"></ion-img>
+      <ion-card-content >
+        <p>Limburgs Mooiste is vanaf 1992 een fietsevenement in Zuid-Limburg. Sinds enkele jaren is het aanbod uitgebreid met een hardloopevenement (RUN) en een fietsevenement in Noord-Limburg. </p>
       </ion-card-content>
     </ion-card>
+
+    <ion-card id="news-card">
+      <ion-card-header>
+        <ion-card-title color="primary">Het mooiste nieuws</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content id="news-list">
+        <ion-list>
+          <ion-item color="primary" *ngFor="let item of newsItems" href="https://www.limburgsmooiste.nl/2019/nieuws/{{item.url}}">
+            <ion-thumbnail>
+              <img src="https://www.limburgsmooiste.nl/wp-content/uploads/{{item.imgUrl}}" alt="">
+            </ion-thumbnail>
+            <ion-label><ion-text><h3>{{item.title}}</h3></ion-text></ion-label>
+          </ion-item>
+        </ion-list>      
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card id="news-card" color="secondary">
+  
+        <ion-card-content id="news-list">
+          <ion-card id="news-item" color="primary" *ngFor="let item of newsItems">
+            <ion-card-header id="news-header" color="primary">
+              <ion-card-title id="card-title">{{item.title}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+  
+              <ion-img id="news-image" src="https://www.limburgsmooiste.nl/wp-content/uploads/{{item.imgUrl}}" alt=""></ion-img>
+              <ion-text>{{item.text}}</ion-text>
+              
+              <ion-button href="https://www.limburgsmooiste.nl/2019/nieuws/{{item.url}}" id="lees-verder" color="secondary">Lees verder</ion-button>
+       
+              
+            </ion-card-content>
+          </ion-card>
+        </ion-card-content>
+      </ion-card>
+
+
+
     <ion-list lines="none">
       <ion-list-header>
         <ion-label>Resources</ion-label>

@@ -16,9 +16,39 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Programma',
+      url: '/programma',
+      icon: 'calendar'
+    },
+    {
+      title: 'Routes & Info',
+      url: '/routes-info',
+      icon: 'map'
+    },
+    {
+      title: 'Faciliteiten',
+      url: '/faciliteiten',
+      icon: 'medkit'
+    },
+    {
+      title: 'Team deelname',
+      url: '/team-deelname',
+      icon: 'people'
+    },
+    {
+      title: 'FAQ',
+      url: '/faq',
+      icon: 'help'
+    },
+    {
+      title: 'Organisatie',
+      url: '/organisatie',
+      icon: 'man'
+    },
+    {
+      title: 'Foto galerij',
+      url: '/foto-galerij',
+      icon: 'camera'
     }
   ];
 
@@ -32,7 +62,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
+      this.statusBar.hide();
       this.splashScreen.hide();
     });
   }

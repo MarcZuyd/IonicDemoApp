@@ -1,4 +1,49 @@
 .welcome-card ion-img {
   max-height: 35vh;
   overflow: hidden;
+  
+}
+a {
+  color: white;
+}
+ion-thumbnail {
+  margin-right: 2vh;
+}
+
+#news-item {
+  padding: 0 0 8vh 0;
+
+  height: fit-content;
+  
+}
+
+#card-title {
+  border-bottom: 0px solid #449cc1;
+  
+  
+}
+
+#news-header {
+  margin: 0 0 4vh 0;
+
+
+}
+
+#news-card {
+  padding: 0%;
+  margin: 0vh 0 0 0;
+}
+
+#news-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#lees-verder {
+  position: absolute;
+  right: 4vh;
+  margin: 4vh;
+  margin-bottom: 2vh;
+ 
 }
