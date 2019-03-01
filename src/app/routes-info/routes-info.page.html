@@ -2,7 +2,18 @@
     <ion-toolbar color="primary">
       <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
-        </ion-buttons>
+        
+      </ion-buttons>
+      
+      <ion-buttons slot="end" >
+          <ion-button (click)="presentPopover($event)">
+              <ion-icon name="compass"></ion-icon>
+          </ion-button> 
+        <ion-button (click)="presentPopover($event)">
+            <ion-icon name="more"></ion-icon>
+        </ion-button>        
+      </ion-buttons>
+
       <ion-title>Routes & info</ion-title>
     </ion-toolbar>
   </ion-header>

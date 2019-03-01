@@ -20,6 +20,115 @@
         De Gele en Rode routes zijn speciaal voor de deelnemers die van het klimwerk houden.
         De Oranje routes zijn voor de best getrainde deelnemers; het is een combinatie van een deel van de rode en gele tochten.
     </ion-card-content>
+
+    <ion-card-header >
+      <ion-card-title color="tertiary">Race</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col id="bold">
+            Route
+          </ion-col>
+          <ion-col id="bold">
+            Afstand
+          </ion-col>
+          <ion-col id="bold">
+            Hoogte
+          </ion-col>
+          <ion-col id="bold">
+            Starttijd
+          </ion-col>
+        </ion-row>
+
+        <ion-row *ngFor="let race of races">
+          <ion-col>
+            {{ race.route }}
+          </ion-col>
+          <ion-col>
+            {{ race.afstand }}
+          </ion-col>
+          <ion-col>
+            {{ race.hoogtemeters }}
+          </ion-col>
+          <ion-col class="time">
+            {{ race.starttijd }}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+
+    <ion-card-header >
+      <ion-card-title color="tertiary">MTB</ion-card-title>
+    </ion-card-header>    
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col id="bold">
+            Route
+          </ion-col>
+          <ion-col id="bold">
+            Afstand
+          </ion-col>
+          <ion-col id="bold">
+            Hoogte
+          </ion-col>
+          <ion-col id="bold">
+            Starttijd
+          </ion-col>
+        </ion-row>
+    
+        <ion-row *ngFor="let race of mtb">
+          <ion-col>
+            {{ race.route }}
+          </ion-col>
+          <ion-col>
+            {{ race.afstand }}
+          </ion-col>
+          <ion-col>
+            {{ race.hoogtemeters }}
+          </ion-col>
+          <ion-col class="time">
+            {{ race.starttijd }}
+          </ion-col>
+        </ion-row>          
+      </ion-grid>
+    </ion-card-content>
+
+
+    <ion-card-header >
+      <ion-card-title color="tertiary">Familie</ion-card-title>
+    </ion-card-header>    
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col id="bold">
+            Route
+          </ion-col>
+          <ion-col id="bold">
+            Afstand
+          </ion-col>
+          <ion-col id="bold">
+            Starttijd
+          </ion-col>
+        </ion-row>
+      
+        <ion-row *ngFor="let race of familie">
+          <ion-col>
+            {{ race.route }}
+          </ion-col>
+          <ion-col>
+            {{ race.afstand }}
+          </ion-col>
+          <ion-col class="time">
+            {{ race.starttijd }}
+          </ion-col>
+        </ion-row>          
+      </ion-grid>
+    </ion-card-content>
   </ion-card>
 
 </ion-content>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { GoogleMaps, GoogleMap, GoogleMapOptions, GoogleMapsMapTypeId, Marker } from '@ionic-native/google-maps/ngx';
 import { Environment } from '@ionic-native/google-maps';
+import { PopoverController } from '@ionic/angular';
+import { PopoverComponent } from '../components/popover/popover.component';
 
 @Component({
   selector: 'app-routes-info',
@@ -12,11 +14,19 @@ export class RoutesInfoPage implements OnInit {
 
   map: GoogleMap;
 
-  constructor(private platform: Platform) { }
+  constructor(private platform: Platform, public popoverController: PopoverController) { }
 
   async ngOnInit() {
     await this.platform.ready();
     await this.loadMap();
+  }
+  async presentPopover(ev: any) {
+    const popover = await this.popoverController.create({
+      component: PopoverComponent,
+      event: ev,
+      translucent: true
+    });
+    return await popover.present();
   }
 
   loadMap() {

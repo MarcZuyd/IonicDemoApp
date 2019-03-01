@@ -1,3 +1,27 @@
 #bold {
     font-weight: bold;
 }
+
+.time {
+    color: #133068;
+    border-left: 0vh solid #449cc1;
+    //background-color: #e7eaef;
+
+    font-weight: bold;
+}
+
+ion-card {
+    width: 100%;
+    margin: 0;
+}
+ion-col {
+    //background-color: #e7eaef;
+    padding: 0vh;
+    color: #133068;
+    margin-bottom: 2vh;
+}
+
+ion-col#bold {
+    border: 0vh solid white;
+}
+
